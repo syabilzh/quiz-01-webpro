@@ -133,6 +133,16 @@
       </div>
     </article>
 
+    <!-- Tombol Interaktif -->
+    <button onclick="toggleStory()" id="toggleBtn" class="mt-4 px-4 py-2 bg-[#FF4D00] text-white text-sm font-semibold rounded-xl hover:bg-[#e04300] transition-colors">
+      Show Commuter Joke &darr;
+    </button>
+
+    <!-- Teks yang awalnya tersembunyi -->
+    <div id="secretStory" class="hidden text-gray-300 text-sm leading-relaxed border-t border-white/10 pt-3">
+      <p><em>"If you're slightly late, Jakarta starves!"</em> Vendors are known to race toward the capital at dawn so office workers don't miss their breakfast mission.</p>
+    </div>
+
   </main>
   <!-- END: Main Content Section -->
 
@@ -143,6 +153,22 @@
     </div>
   </footer>
   <!-- END: Footer -->
+
+  <script>
+  function toggleStory() {
+    const story = document.getElementById('secretStory');
+    const btn = document.getElementById('toggleBtn');
+    
+    // Mengecek apakah elemen sedang tersembunyi
+    if (story.classList.contains('hidden')) {
+      story.classList.remove('hidden');
+      btn.innerHTML = 'Hide Story &uarr;';
+    } else {
+      story.classList.add('hidden');
+      btn.innerHTML = 'Show Commuter Joke &darr;';
+    }
+  }
+  </script>
 
 </body>
 </html>
