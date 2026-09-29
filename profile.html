@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Profile - Syabil Zihni</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS untuk Grid & Glow -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#121212',
+            surfaceDark: '#1a1a1a',
+            primaryOrange: '#FF4D00',
+            deepAmber: '#5E0F01',
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', '"Space Grotesk"', 'sans-serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <style>
+    .tight-heading {
+      letter-spacing: -0.045em;
+    }
+    .grid-background {
+      background-color: #121212;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .hero-gradient {
+      background: radial-gradient(circle at 50% 20%, #4a0d01 0%, #290802 45%, #121212 90%);
+    }
+  </style>
+</head>
+<body class="bg-brandDark text-white font-body min-h-screen flex flex-col justify-between selection:bg-primaryOrange selection:text-white">
+  
+  <!-- Header Navigation -->
+  <header class="w-full relative z-20 pt-4 pb-4 bg-brandDark">
+    <nav class="max-w-6xl mx-auto px-6 flex justify-center items-center gap-10 text-[15px] font-medium tracking-normal text-gray-200">
+      <a href="index.html" class="transition-colors hover:text-primaryOrange">Home</a>
+      <a href="profile.html" class="transition-colors hover:text-primaryOrange">Profile</a>
+      
+      <!-- Menu Hometown dengan Dropdown -->
+      <div class="relative group py-2">
+        <a href="hometown.html" class="transition-colors hover:text-primaryOrange flex items-center gap-1">
+          Hometown
+          <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        
+        <!-- Kotak Dropdown Menu -->
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-1 w-44 hidden group-hover:block transition-all z-30">
+          <div class="bg-[#1a1a1a] border border-white/10 rounded-xl shadow-2xl overflow-hidden py-2 flex flex-col">
+            <a href="food.html" class="px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors">Local Foods</a>
+            <a href="tourist.html" class="px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors">Tourist Destinations</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- END: NavigationBar -->
+
+  <main class="flex-grow">
+    <!-- Hero Profile Section -->
+    <section class="hero-gradient pt-6 pb-10 px-6 md:px-12 border-b border-white/5" data-purpose="profile-hero">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
+        
+        <div class="flex flex-col justify-center space-y-5 md:space-y-6 pt-2 w-full" data-purpose="profile-bio-details">
+          <div>
+            <span class="block text-gray-400 text-sm md:text-base font-medium tracking-wide uppercase">Full Name</span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tight-heading mt-1">
+              Syabil Zihni
+            </h1>
+          </div>
+          <div>
+            <span class="block text-gray-400 text-sm md:text-base font-medium tracking-wide uppercase">Date of Birth</span>
+            <p class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tight-heading mt-1">
+              May 11th 2007
+            </p>
+          </div>
+          <div>
+            <span class="block text-gray-400 text-sm md:text-base font-medium tracking-wide uppercase">Interests</span>
+            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-white tight-heading mt-1 leading-snug">
+              Design, Programming, Films, Games
+            </p>
+          </div>
+        </div>
+
+        <div class="w-48 sm:w-56 md:w-64 flex-shrink-0 shadow-2xl rounded-2xl overflow-hidden border border-white/10" data-purpose="profile-photo">
+          <img alt="Foto gua" class="w-full h-auto object-cover object-center block hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQf8-EtSCBi_5G6hEQ3iyKyA4kjoD_wzfqaQ3anRkwHRQCj5xNHKB6lXmwAUcw_G4N5IIny6uYp9wMW0jO228emDtFrLbzZXkY4yGCgdBRXAWMHSJmYsaPP9voPlPbh2XpCU0arIdAskPW66oJozB0T3eZ3qKoWX9qiavYQ-NTtRjSucZNGu_z8RRPfF4PeZunI8GlBXb_ymfR5_EKYwkvH2-0GlVV7eXGmh_byudgY2UVkwrComi19a6vSUrTIFPXIYA"/>
+        </div>
+
+      </div>
+    </section>
+    <!-- END: Hero Profile Section -->
+
+    <!-- Detailed Biography Section -->
+    <section class="grid-background py-16 px-6 md:px-12 flex-grow" data-purpose="detailed-biography">
+      <div class="max-w-5xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-between">
+        
+        <div class="lg:w-2/5 w-full flex-shrink-0" data-purpose="rectorate-image-card">
+          <div class="rounded-xl overflow-hidden shadow-2xl border border-white/10">
+            <img alt="Rektorat ITS" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQU06SfwRt6Nd4BV6O23ies0gtQhIRjHoDr53DmGhCTpo-0veVGFg_N9NhM-lzE_0-vgSjOWidnjASXHgX2mK-xbn9871w9APaq1ZzqaEY2QnVFVWD4Zt3EG3x72u0DcWIEJMeW0ThYvzhPV8Z8t4sMOIvCU6LDzs_REtb2bk5rApRXIJHu0TmuZRLJTgH6voGvN-sncplBOBEIC8GM_C6sEocjhD7APmVS-BGWNp6pV5Q059_EnfX6bFpUY2W8x3asE0"/>
+          </div>
+        </div>
+
+        <div class="space-y-6 lg:w-3/5 text-base md:text-lg leading-relaxed font-normal text-justify md:text-left text-gray-300">
+          <p>
+            Hello everyone! My name is Syabil. I was born in Jakarta, May 11th 2007, raised in Bekasi. A little fun fact about me, I'm a mix of 3 ethnicities, Javanese, Sundanese, and Batak.
+          </p>
+          <p>
+            I am currently majoring Informatics Engineering in ITS Surabaya. As of now, my main interest is Software Engineering. Though, I am open to new experiences since I've only been studying here for about a year. I've also been interested in Design and has been pursuing it as a hobby.
+          </p>
+        </div>
+
+      </div>
+    </section>
+    <!-- END: Detailed Biography Section -->
+  </main>
+  
+  <!-- Footer -->
+  <footer class="w-full bg-[#0d0d0d] py-7 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6 text-center text-sm font-medium text-white/70">
+      <p>© Syabil Zihni - Quiz 1 Webpro</p>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+</body>
+</html>

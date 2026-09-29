@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Bekasi Culinary - Craving the local tastes?</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS untuk Grid & Glow -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#121212',
+            brandCard: '#1A1A1A',
+            brandCardBorder: '#262626',
+            brandAccent: '#FF4D00',
+            brandWine: '#5E0F01',
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <style>
+    .bg-grid-pattern {
+      background-color: #121212;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+    .hero-banner-gradient {
+      background: radial-gradient(ellipse 120% 90% at 50% -20%, #751a08 0%, #440d03 45%, #1f0702 75%, #140502 100%);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-brandDark text-white font-body antialiased min-h-screen selection:bg-[#FF4D00] selection:text-white bg-grid-pattern flex flex-col justify-between">
+
+  <!-- Header Navigation -->
+  <header class="w-full relative z-20 pt-6 pb-4 bg-brandDark">
+    <nav class="max-w-6xl mx-auto px-6 flex justify-center items-center gap-10 text-[15px] font-medium tracking-normal text-gray-200">
+      <a href="index.html" class="transition-colors hover:text-brandAccent">Home</a>
+      <a href="profile.html" class="transition-colors hover:text-brandAccent">Profile</a>
+      
+      <!-- Menu Hometown dengan Dropdown -->
+      <div class="relative group py-2">
+        <a href="hometown.html" class="transition-colors hover:text-brandAccent flex items-center gap-1">
+          Hometown
+          <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        
+        <!-- Kotak Dropdown Menu -->
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-1 w-44 hidden group-hover:block transition-all z-30">
+          <div class="bg-[#1a1a1a] border border-white/10 rounded-xl shadow-2xl overflow-hidden py-2 flex flex-col">
+            <a href="food.html" class="px-4 py-2.5 text-sm text-brandAccent font-semibold hover:bg-white/5 transition-colors">Local Foods</a>
+            <a href="tourist.html" class="px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors">Tourist Destinations</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- END: NavigationBar -->
+
+  <!-- Hero Section -->
+  <section class="w-full hero-banner-gradient pb-16 md:pb-24 rounded-b-[48px] md:rounded-b-[60px] border-b border-white/5 relative overflow-hidden flex flex-col items-center pt-16 px-4 md:px-8 shadow-2xl z-10">
+    <div class="w-full max-w-[1080px] text-center">
+      <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-bold text-white tracking-tight leading-[1.15] mb-2">
+        Craving the local <span class="font-extrabold tracking-normal">tastes?</span>
+      </h1>
+      <p class="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-normal text-white/95 tracking-normal">
+        Here’s what <span class="font-black text-white">Bekasi</span> has to offer
+      </p>
+    </div>
+  </section>
+  <!-- END: Hero Section -->
+
+  <!-- Main Content Section -->
+  <main class="w-full max-w-[1080px] mx-auto px-4 sm:px-6 flex flex-col gap-10 md:gap-12 my-12 z-10 flex-grow" data-purpose="food-items-showcase">
+    
+    <article class="bg-[#1A1A1A] rounded-[36px] p-6 sm:p-8 md:p-10 border border-[#2b2b2b]/70 flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-10 shadow-2xl hover:border-neutral-700 transition duration-300">
+      <div class="w-full md:w-[360px] lg:w-[380px] h-[280px] sm:h-[320px] md:h-auto flex-shrink-0 relative overflow-hidden rounded-[24px]">
+        <img alt="Gabus Pucung" class="w-full h-full object-cover object-center transform hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaOPK4OYh7d0lUFgE_9ryjO46MCnUbhBUPmrJqOt7xZsYjTxbl59o23HcFNulvxQAJ3SCONqh7iT86j2wLyXj_nw8_NUuPa6gc6ukUCtF1fBREtHDg4ULSlRNn9e4SkyMNn-cWcB2390eUFz-KCmcTcowz6F5q6NWYGR41YUAvIfRqthcj4ES0bvmL5SvoBMcOhwwdyxeVEiK4isFVV9DH-yarYtye2sLpTDhfnHuMGz4c7SwqbQQkp4mRIM1JmQ6QPis">
+      </div>
+      <div class="flex-1 flex flex-col justify-center text-left py-2">
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-[42px] font-bold text-white mb-5 tracking-tight">
+          Gabus Pucung
+        </h2>
+        <div class="space-y-4 text-gray-200 text-sm sm:text-base leading-relaxed md:leading-[1.75] font-normal">
+          <p>
+            This legendary dish has roots in the traditions of the native Betawi communities living along the rivers of Bekasi, where the local rivers and swamps were once abundant with wild snakehead fish (ikan gabus).
+          </p>
+          <p>
+            It features a deep black, savory broth rich in spices and flavored distinctively with pucung (kluwek) seeds, paired with the firm yet tender texture of the snakehead fish.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bg-[#1A1A1A] rounded-[36px] p-6 sm:p-8 md:p-10 border border-[#2b2b2b]/70 flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-10 shadow-2xl hover:border-neutral-700 transition duration-300">
+      <div class="w-full md:w-[360px] lg:w-[380px] h-[280px] sm:h-[320px] md:h-auto flex-shrink-0 relative overflow-hidden rounded-[24px]">
+        <img alt="Bubur Tambun" class="w-full h-full object-cover object-center transform hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjT_0lFGjm_h5EfGd5TwgwBg088i5BdpKNuvkEVX_RtU9dqcNyldbRzVmzDdLBXpqUwQrHB5t4tjPkpAUL6n68xFBSINTbJ1bB0FW3Lz17Z9Nozmox8BDzQIc8vMZM-ARFnY4BBPlu1rEK2RnxRyO-1BMaPHvcDBptVhsu35nIeDjX_ruCxSMhAf_cPFfHaq1HGBvY-1hJWGK2LYYMRfLcCsbIvDJK-Ws2K1o0l80j33q0K6UVGaW5pbC0bAo1VP7yXao">
+      </div>
+      <div class="flex-1 flex flex-col justify-center text-left py-2">
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-[42px] font-bold text-white mb-5 tracking-tight">
+          Bubur Tambun
+        </h2>
+        <div class="space-y-4 text-gray-200 text-sm sm:text-base leading-relaxed md:leading-[1.75] font-normal">
+          <p>
+            Bubur Tambun is deeply tied to the local Betawi-Sundanese culinary heritage of the Bekasi region, featuring a rich, savory broth, traditional local spices, and distinct rustic toppings.
+          </p>
+          <p>
+            A famous running joke among locals describes the legendary Bubur Tambun vendors as interplanetary speed racers: <em>"If you're slightly late, Jakarta starves!"</em> They are known to speed aggressively toward the capital at dawn just to make sure office workers don't miss their breakfast mission.
+          </p>
+        </div>
+      </div>
+    </article>
+
+  </main>
+  <!-- END: Main Content Section -->
+
+  <!-- Footer -->
+  <footer class="w-full bg-[#0d0d0d] py-7 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6 text-center text-sm font-medium text-white/70">
+      <p>© Syabil Zihni - Quiz 1 Webpro</p>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+</body>
+</html>

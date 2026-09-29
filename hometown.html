@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Bekasi Kota Patriot - Hometown</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS untuk Grid & Glow -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#121212',
+            surfaceDark: '#1a1a1a',
+            primaryOrange: '#FF4D00',
+            deepAmber: '#5E0F01',
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', '"Space Grotesk"', 'sans-serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      background-color: #121212;
+      color: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .font-coolvetica {
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: -0.035em;
+    }
+    .hero-gradient {
+      background: radial-gradient(130% 90% at 20% 0%, #5E0F01 0%, #2b0802 45%, #121212 95%);
+    }
+    .grid-pattern-bg {
+      background-color: #121212;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+    .card-shadow-overlay {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 35%, rgba(0, 0, 0, 0.88) 100%);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#121212] text-white antialiased selection:bg-[#FF4D00] selection:text-white">
+
+  <!-- Header Navigation -->
+  <header class="w-full relative z-20 pt-4 pb-4 bg-brandDark">
+    <nav class="max-w-6xl mx-auto px-6 flex justify-center items-center gap-10 text-[15px] font-medium tracking-normal text-gray-200">
+      <a href="index.html" class="transition-colors hover:text-primaryOrange">Home</a>
+      <a href="profile.html" class="transition-colors hover:text-primaryOrange">Profile</a>
+      
+      <!-- Menu Hometown dengan Dropdown -->
+      <div class="relative group py-2">
+        <a href="hometown.html" class="transition-colors hover:text-primaryOrange flex items-center gap-1">
+          Hometown
+          <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        
+        <!-- Kotak Dropdown Menu -->
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-1 w-44 hidden group-hover:block transition-all z-30">
+          <div class="bg-[#1a1a1a] border border-white/10 rounded-xl shadow-2xl overflow-hidden py-2 flex flex-col">
+            <a href="food.html" class="px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors">Local Foods</a>
+            <a href="tourist.html" class="px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors">Tourist Destinations</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- END: NavigationBar -->
+
+  <!-- Hero Section -->
+  <div class="w-full hero-gradient pb-16 md:pb-24 rounded-b-[48px] md:rounded-b-[60px] shadow-2xl relative z-10 border-b border-white/5">
+    <section class="max-w-6xl mx-auto px-6 lg:px-12 pt-6 md:pt-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        
+        <div class="lg:col-span-7 flex flex-col justify-center">
+          <h1 class="font-coolvetica text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight text-white mb-6">
+            Bekasi City<br>
+            <span class="text-white">Kota Patriot</span>
+          </h1>
+          <p class="text-base sm:text-lg text-white/90 font-normal leading-relaxed max-w-xl">
+            The very place I grew up in. Bekasi has one of the richest, most transformative lineages in the Indonesian archipelago, journeying from the sacred canal builders of ancient Tarumanegara to the fiery frontline defense of modern republic freedom.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-[380px] aspect-[4/4.5] rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
+            <img alt="Bekasi Landmark View" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG7DXPINyRRgm8W0SKo9Ro4ZIzCK4T2Jq9nXmOK-dXdY6UEXzRxJvERtMqdjg2cHGlNBllvzo45E1byvb9w9Py_fWWh7Jsa5nHTh1YsMAymFFAJb7-Q0PM9H5mBLJua1hL1gbUvkEyz9Pu2FSROv7dm5aSJODWm0h-IXL6vb_0Sfimrbycb_WSibGcnYOmRcl_HvWaSZzf5mAwSXYQQI-HeKjrZ0cR8m5JlCNHkb6jYNbbRndwf5CEb1GFySrRJ669Kuo">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none"></div>
+            <div class="absolute inset-0 flex items-center justify-center p-6 pointer-events-none">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjkjZ8HehpGQZffqKNOfZsAJbWUaFvDTvI5o0sUpoJN20X3mEVQVrmIdeMioPpHqp70JyrvEsquqvv-fk9jw-8b8jtzjTzfuiZuFm8tvreSz8zNNBey5drqFQkNhPRnNYJknF6WkAPumtdgbIE1aF_LZsls_BqnNMFXkGJE3RpeoH94CU1WhxpnL7IfjZUBhtQLzdlKL7NbT2h1ayzQ4jhQLFi7y1FUPNr0cdLsxck7x9pNYGHd12u-i0STV2LL6Fk6UU" alt="Bekasi City Emblem" class="w-48 sm:w-56 h-auto object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.85)] filter">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+  <!-- END: Hero Section -->
+
+  <!-- Main Content Section -->
+  <main class="w-full grid-pattern-bg flex-grow pt-16 pb-20">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12">
+      
+      <section class="mb-14 max-w-4xl">
+        <h2 class="font-coolvetica text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+          Why is it called Kota Patriot?
+        </h2>
+        <p class="text-base sm:text-lg text-white/90 leading-relaxed font-normal">
+          Bekasi is called Kota Patriot (City of Patriots) because of the fierce bravery and sacrifice of its people in fighting Dutch colonial forces and Allied troops to defend Indonesia's independence after 1945.
+        </p>
+      </section>
+
+      <section class="mb-20 max-w-4xl">
+        <h2 class="font-coolvetica text-3xl sm:text-4xl font-bold tracking-tight text-white mb-5">
+          Fun Facts about Bekasi
+        </h2>
+        <div class="space-y-4 text-base sm:text-lg text-white/90 leading-relaxed font-normal">
+          <p>
+            Bekasi is widely known as a satellite city because millions of its residents travel back and forth to Jakarta daily for work or university, making it one of the busiest commuter hubs in the metropolitan area.
+          </p>
+          <p>
+            Bekasi famously went viral as a joke among Indonesian netizens who playfully referred to it as a "separate planet" due to its distance from central Jakarta and warm weather. In reality, it has rapidly evolved into a modern metropolis equipped with high-end infrastructure like LRT lines.
+          </p>
+          <p>
+            Hidden behind its residential growth, the Cikarang area in Bekasi is home to one of the largest industrial manufacturing hubs in all of Southeast Asia.
+          </p>
+        </div>
+      </section>
+
+      <section class="pt-4">
+        <h2 class="font-coolvetica text-3xl sm:text-4xl font-bold text-center tracking-tight text-white mb-10">
+          Learn more about Bekasi
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+          
+          <a href="food.html" class="group relative rounded-2xl overflow-hidden aspect-[16/10] bg-[#1A1A1A] border border-white/10 shadow-lg hover:border-white/20 transition-all duration-300 block" data-purpose="teaser-card-foods">
+            <img alt="Bekasi Local Food - Gabus Pucung" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKyOT64fjUhiYmJ5OaaHjsdtrC1akX_bf04CZAtuqFZXoSi4QvUBRc0LF8XlGgMSpx7am4EfA4mVG14l38qa4nlVB39uRrkpiKgk-7SEUE3ygxYqUOGy_s5PHVZwCKyHrgUL8r6Mpb0oeZmf_kukKpw0AKppuZJfMrLQMLwGI9BCr0Vc4P4MqyCy1WE9F5L7oSxTqvGbzpmEopvQUMB_i8P2b7YSYAey_PzacBNiE6RuCvvQK9fqg-myU3X98-4OwuW7Q">
+            <div class="absolute inset-0 card-shadow-overlay"></div>
+            <div class="absolute bottom-0 inset-x-0 p-6 flex flex-col justify-end">
+              <h3 class="font-coolvetica text-2xl font-bold text-white mb-1 group-hover:text-white/95">
+                Local Foods
+              </h3>
+              <span class="inline-flex items-center text-[#FF4D00] text-base font-semibold">
+                Details &rarr;
+              </span>
+            </div>
+          </a>
+
+          <a href="tourist.html" class="group relative rounded-2xl overflow-hidden aspect-[16/10] bg-[#1A1A1A] border border-white/10 shadow-lg hover:border-white/20 transition-all duration-300 block" data-purpose="teaser-card-destinations">
+            <img alt="Curug Parigi Waterfall in Bekasi" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoZizfpV7X2t579laMEhAoUR0Iuj5mSurmmCqj892P93zeNmURj8b0Xgyb_XEdokSz9uWwat614Y1esptRXedcBehhMHY0JgNICpMHcebpYeZTVVWLWOxOf_6b_x01M4mvV1HITRnODckuJZgd7ulXHpGZqhj5nvTFanVP-LAuf6IzsTYeIpcIlWgMyq7g4TqDH_4FYvJLyrFI_FP6069Ch1_EXRQnOfzzOSP9ntN7g6VCu4E9lfKnVDa2cMGOXQAXGcQ">
+            <div class="absolute inset-0 card-shadow-overlay"></div>
+            <div class="absolute bottom-0 inset-x-0 p-6 flex flex-col justify-end">
+              <h3 class="font-coolvetica text-2xl font-bold text-white mb-1 group-hover:text-white/95">
+                Tourist Destinations
+              </h3>
+              <span class="inline-flex items-center text-[#FF4D00] text-base font-semibold">
+                Details &rarr;
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <!-- END: Main Content Section -->
+
+  <!-- Footer -->
+  <footer class="w-full bg-[#0d0d0d] py-7 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6 text-center text-sm font-medium text-white/70">
+      <p>© Syabil Zihni - Quiz 1 Webpro</p>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+</body>
+</html>

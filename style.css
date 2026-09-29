@@ -1,0 +1,18 @@
+/* Hero radial ambient glow blending */
+.hero-glow-bg {
+  background: radial-gradient(circle at 18% 10%, #7d1c03 0%, #430c02 30%, #170905 55%, #121212 85%);
+}
+
+/* Grid pattern for 'More About Me' card section */
+.grid-pattern-bg {
+  background-color: #151515;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+
+/* Smooth typography tracking */
+.tight-heading {
+  letter-spacing: -0.045em;
+}
